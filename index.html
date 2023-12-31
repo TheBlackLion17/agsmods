@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGS MODS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-+lJNFW9teG9UKFOb9FkfB7PiQc2tsYI5sP0Fz1R12b4MZbMXWzIjg73YQqUnVfuM6aZIknfWvLq/AGQZS3RWVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            width: 100%; /* You can adjust this value to increase or decrease the width */
+            margin: auto;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Add space between logo and channel name */
+            padding: 10px;
+            background-color: #000; /* Set the background color to black */
+            color: white;
+        }
+
+        #logo {
+            max-width: 100px; /* Adjust the width as needed */
+            height: auto;
+            margin-right: 10px; /* Add margin to separate the logo from the text */
+        }
+
+        h1 {
+            margin: 0;
+            text-align: center; /* Center-align the text */
+        }
+      
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .subheader {
+            background-color: #333;
+            color: white;
+            padding: 5px; /* Reduce padding */
+            text-align: center;
+            font-size: 15px; /* Reduce font size */
+        }
+
+
+        section {
+            margin-top: 20px;
+        }
+
+        .mod-card {
+            border:0px solid #ddd;
+            border-radius: 0px;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center; /* Center-align content within the mod card */
+        }
+
+        .mod-image {
+            max-width: 100%; /* Ensure the image doesn't exceed the card width */
+            height: auto;
+            margin-bottom: 10px; /* Add margin below the image */
+        }
+    
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff; 
+        }
+        
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            background-color: #000;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+        }
+
+        .copyright {
+            background-color: #000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+.wrapper .icon{
+  position: relative;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+  display: inline-block;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #333;
+  text-decoration: none;
+}
+.wrapper .tooltip {
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  line-height: 1.5;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip::before {
+  position: absolute;
+  justify-content: center;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%
+  align-items: center;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  align-items: center;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+.wrapper .telegrame:hover,
+.wrapper .telegrame:hover .tooltip,
+.wrapper .telegrame:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="https://telegra.ph/file/5254eb3ce91431dd02554.jpg" alt="Channel Logo">
+        <h1>AGS MODS</h1>
+         <nav>
+            <a href="#" style="color: white;">Home</a>
+            <a href="#" style="color: white;">Privacy Policy</a>
+            <a href="#" style="color: white;">Terms and Conditions</a>
+        </nav>
+
+   </header>
+
+    <div class="subheader">
+         <a href="#" style="color: white;">Home</a> > <a href="#"  style="color: white;">WhatsApp Mods</a>
+    </div>
+    
+    <h3>AGS WhatsappV1</h3>
+    <p1> By Ags Mods <p1>
+    
+    </header>
+
+    <section>
+        <div class="mod-card">
+            <img class="mod-image" src="https://telegra.ph/file/86e6603107c81056f1ea6.jpg" alt="AGS WhatsappV1">
+            <h2>AGS WhatsappV1</h2>
+            
+            <img src="https://telegra.ph/file/25c0bc110285306cf4e55.jpg" alt="Flowers in Chania">
+            <p> 🚀 **Version: 2.23.21.88 Update Highlights:**</p>
+
+</p>**Added Features:**</p>
+  </p> Option to hide profile picture from home header</p>
+
+  </p>**Bug Fixes:**</p>
+  </p> Fixed View Once issue</p>
+  </p> Fixed Last seen not showing in home screen</p>
+  </p> Fixed Online dot not showing in home screen</p>
+  </p> Fixed Instagram-like story not working</p>
+  </p> Fixed Chat divider grey line not showing in home screen</p>
+  </p> Fixed Hide view status not working on some devices</p>
+  </p> Fixed Call crashing on some devices</p>
+  </p> Fixed Profile photo not showing on some devices</p>
+  </p> Fixed About not working properly</p>
+  </p> Fixed Move to AKR WhatsApp Chats crashing issue</p>
+  </p> Fixed Message translation crashing on more options</p>
+  </p> Fixed When turn on message edit time & date crashing issue</p>
+
+</p> **Other Improvements:**</p>
+  </p> Miscellaneous fixes and improvements </p>
+
+</p>🌟 Enjoy an enhanced experience with these updates! </p>
+            <p>Version: 1.0</p>
+            <p>Author: Mod Author</p>
+             <a href="#" class="download-button">Download Mod 1</a>
+        </div>
+
+<div class="wrapper">
+  <a href="#" class="icon facebook">
+    <div class="tooltip">Facebook</div>
+    <span><i class="fab fa-facebook-f"></i></span>
+  </a>
+  <a href="#" class="icon telegrame">
+    <div class="tooltip">Telegrame</div>
+    <span><i class="fab fa-telegrame"></i></span>
+  </a>
+  <a href="#" class="icon instagram">
+    <div class="tooltip">Instagram</div>
+    <span><i class="fab fa-instagram"></i></span>
+  <a href="#" class="icon youtube">
+    <div class="tooltip">Youtube</div>
+    <span><i class="fab fa-youtube"></i></span>
+  </a>
+</div>
+     <div class="copyright">
+        &copy; 2023 AGS MODES. All Rights Reserved.
+        
+            <a href="https://www.instagram.com/your_instagram_account/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
